@@ -1,13 +1,31 @@
 <?php
-// Sample data for product items
-$products = [
-    ["title" => "60", "price" => "₹ 80", "image" => "assets\images\Item_Genesis_Crystal.webp"],
-    ["title" => "330", "price" => "₹ 390", "image" => "assets\images\Item_Genesis_Crystal.webp"],
-    ["title" => "1090", "price" => "₹ 1140", "image" => "assets\images\Item_Genesis_Crystal.webp"],
-    ["title" => "2240", "price" => "₹ 2450", "image" => "assets\images\Item_Genesis_Crystal.webp"],
-    ["title" => "3880", "price" => "₹ 3750", "image" => "assets\images\Item_Genesis_Crystal.webp"],
-    ["title" => "8080", "price" => "₹ 7500", "image" => "assets\images\Item_Genesis_Crystal.webp"],
-    ["title" => "welkin moons", "price" => "₹ 379", "image" => "photo scroll/srnhhu9cip971.webp"]
+// Array of diamond packages
+$diamondPackages = [
+    ["title" => "5 diamonds", "price" => "₹ 15", "image" => "dimond.png"],
+    ["title" => "11 diamonds", "price" => "₹ 25", "image" => "dimond.png"],
+    ["title" => "14 diamonds", "price" => "₹ 30", "image" => "dimond.png"],
+    ["title" => "22 diamonds", "price" => "₹ 45", "image" => "dimond.png"],
+    ["title" => "42 diamonds", "price" => "₹ 75", "image" => "dimond.png"],
+    ["title" => "56 diamonds", "price" => "₹ 95", "image" => "dimond.png"],
+    ["title" => "86 diamonds", "price" => "₹ 135", "image" => "dimond.png"],
+    ["title" => "172 diamonds", "price" => "₹ 275", "image" => "dimond.png"],
+    ["title" => "257 diamonds", "price" => "₹ 380", "image" => "dimond.png"],
+    ["title" => "344 diamonds", "price" => "₹ 530", "image" => "dimond.png"],
+    ["title" => "429 diamonds", "price" => "₹ 650", "image" => "dimond.png"],
+    ["title" => "514 diamonds", "price" => "₹ 730", "image" => "dimond.png"],
+    ["title" => "706 diamonds", "price" => "₹ 960", "image" => "dimond.png"],
+    ["title" => "1050 diamonds", "price" => "₹ 1420", "image" => "dimond.png"],
+    ["title" => "1135 diamonds", "price" => "₹ 1800", "image" => "dimond.png"],
+    ["title" => "1412 diamonds", "price" => "₹ 1980", "image" => "dimond.png"],
+    ["title" => "2195 diamonds", "price" => "₹ 3100", "image" => "dimond.png"],
+    ["title" => "2901 diamonds", "price" => "₹ 3850", "image" => "dimond.png"],
+    ["title" => "3600 diamonds", "price" => "₹ 4850", "image" => "dimond.png"],
+    ["title" => "5532 diamonds", "price" => "₹ 6650", "image" => "dimond.png"],
+    ["title" => "9288 diamonds", "price" => "₹ 10800", "image" => "dimond.png"],
+    ["title" => "Weekly Pass", "price" => "₹ 170"],
+    ["title" => "Starlight Pass", "price" => "₹ 290"],
+    ["title" => "Twilight Pass", "price" => "₹ 710"],
+
 ];
 ?>
 
@@ -66,21 +84,24 @@ $products = [
 
         <h3>2.) Select Service Amount</h3>
         
-        <div class="Items grid-container">
-            <?php foreach ($products as $product): ?>
-                <button class="box grid-item">
-                    <a href="#" class="Item__link">
-                        <div class="product-container" style="display: block;">
-                            <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['title']; ?>" class="Image">
-                            <span class="Item__title"><?php echo $product['title']; ?></span>
-                        </div>
-                        <span class="Item__price"><?php echo $product['price']; ?></span>
-                    </a>
-                </button>
-            <?php endforeach; ?>
-        </div>
+        <div class="container">
+    <p class="instruction">
+        Please enter your User ID & Server and make sure it is correct. Example: 123456789|server-asia.
+    </p>
+    <div class="Items grid-container">
+        <?php foreach ($diamondPackages as $package): ?>
+            <button class="box grid-item">
+                <a href="#" class="Item__link">
+                    <div class="product-container" style="display: block;">
+                        <img src="<?php echo $package['image']; ?>" alt="#" class="Image">
+                        <span class="Item__title"><?php echo $package['title']; ?></span>
+                    </div>
+                    <span class="Item__price"><?php echo $package['price']; ?></span>
+                </a>
+            </button>
+        <?php endforeach; ?>
     </div>
-
+</div>
     <script>
         document.querySelectorAll('.grid-item').forEach(item => {
             item.addEventListener('click', function() {
